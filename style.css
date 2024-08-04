@@ -41,7 +41,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: absolute;
     z-index: 100;
     background-color: transparent;
     font-size: 18px;
@@ -299,3 +299,20 @@ body {
     cursor: pointer;
 }
 
+.class-btn button.selected {
+    background-color: #ec9b00;
+    color: #fff;
+}
+
+.class-btn button.selected::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
