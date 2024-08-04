@@ -1,7 +1,5 @@
 :root {
-
     /* font colors */
-
     --font-color-1: white;
     --font-color-2: #355592;
     --font-color-3: black;
@@ -12,10 +10,9 @@
     --bg-color-3: #355592;
     --bg-color-4: #f2f8ff;
     --bg-color-5: #f6f6f6;
-    --bg-color-6: rgb(0, 0, 0, 0.7);
+    --bg-color-6: rgba(0, 0, 0, 0.7);
 
     /* border colors */
-
     --border-color-1: white;
     --border-color-2: black;
     --border-color-3: #ec9b00;
@@ -33,15 +30,14 @@ html {
 
 body {
     background-color: var(--bg-color-1);
-    color: var(--fo)
+    color: var(--font-color-3);
 }
 
 /* header section */
-
 .header {
     width: 100vw;
     height: 3vh;
-    padding: 16px, 0px;
+    padding: 16px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -80,14 +76,12 @@ body {
 }
 
 /* hamburger menu */
-
 .menu-btn,
 .menu-icon {
     display: none;
 }
 
 /* home section */
-
 .home {
     position: relative;
     width: 100%;
@@ -101,6 +95,7 @@ body {
     left: 0;
     width: 100%;
     overflow: hidden;
+    z-index: -5;
 }
 
 .home .hero-img img {
@@ -108,7 +103,6 @@ body {
 }
 
 /* hero section */
-
 .hero {
     width: 80%;
     position: relative;
@@ -120,10 +114,10 @@ body {
     align-items: start;
 }
 
-.hero h1{
+.hero h1 {
     font-size: 80px;
     line-height: 80px;
-    text-shadow: 2px, 2px, var(--font-color-3);
+    text-shadow: 2px 2px var(--font-color-3);
 }
 
 .hero p {
@@ -131,7 +125,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
 }
 
 .hero button {
@@ -145,4 +139,81 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.hero .button-1 {
+    color: var(--font-color-1);
+    font-size: 20px;
+    background-color: var(--bg-color-3);
+    border-style: none;
+    text-shadow: 1.5px 1.5px var(--font-color-3);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero .button-2 {
+    color: var(--font-color-1);
+    font-size: 20px;
+    background-color: var(--bg-color-3);
+    border-style: none;
+    cursor: pointer;
+}
+
+.hero .button-3 {
+    color: var(--font-color-1);
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color-1);
+    margin-left: 32px;
+    cursor: pointer;
+}
+
+/* hover effects for buttons */
+.button-1:hover, .button-2:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.button-3:hover {
+    background-color: #003f7f;
+}
+
+.button-1:active, .button-2:active, .button-3:active {
+    background-color: #003f7f;
+}
+
+/* home section styling */
+
+.home-boxes {
+    width: 100%;
+    background-color: var(--bg-color-4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+}
+
+.home-boxes .box {
+    background-color: var(--bg-color-1);
+    width: 16%;
+    height: 16vh;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+
+.home-boxes .box h4 {
+    color: var(--font-color-2);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.home-boxes .box p {
+    font-weight: bold;
+    font-size: 1.4rem;
 }
