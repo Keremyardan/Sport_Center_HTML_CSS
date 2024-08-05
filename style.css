@@ -316,3 +316,62 @@ body {
     border-right: 10px solid transparent;
     border-top: 10px solid transparent;
 }
+
+.class-content {
+    height: auto;
+    width: 80%;
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding-top: 16px;
+}
+
+.class-text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 40%;
+}
+
+.class-text p, h4 {
+    margin-top: 4vh;
+}
+
+.class-text h4 {
+    font-size: 24;
+    opacity: 70%;
+    font-weight: 800;
+}
+
+.class-text p {
+    font-size: 16px;
+    opacity: 60%;
+    font-weight: bold;
+    word-spacing: 3.2px;
+    line-height: 20px;
+}
+
+.class-img {
+    margin-top: 32px;
+    width: 25%;
+}
+
+/* styling for bmi */
+
+.bmi-calculator {
+    height: 55vh;
+    width: 80%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 112px;
+    padding-top: 14vh;
+}
+
+
