@@ -693,3 +693,79 @@ h4 {
     transform: scale(1.01);
     transition: all 0.2s ease-in;
 }
+
+.card .add {
+    position: relative;
+}
+
+.card .add p {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 10px;
+}
+
+.card .add p::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #355592;
+    border-radius: 8px;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.card:hover .add p::before {
+    transform: translateY(-50%) scaleX(1)
+}
+
+.card:hover .add p {
+    color: white;
+}
+
+.card .add p b {
+    position: relative;
+    z-index: 1;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text > * {
+    margin-bottom: 10px;
+}
+
+.card-text > *:last-child {
+    margin-bottom: 0;
+}
+
+.card-text .add {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 16px;
+}
+
+.card-text h4 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.review {
+
+}
