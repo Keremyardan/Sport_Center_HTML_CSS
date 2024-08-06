@@ -43,8 +43,13 @@ body {
     align-items: center;
     position: absolute;
     z-index: 100;
-    background-color: transparent;
+    /*background-color: #355592;*/ /*i know the request was different but i liked that that way that much */
     font-size: 18px;
+    position: fixed;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--bg-color-2);
+    
 }
 
 .header img {
@@ -56,6 +61,7 @@ body {
     justify-content: space-around;
     align-items: center;
     width: 70%;
+    
 }
 
 .navbar-web a {
