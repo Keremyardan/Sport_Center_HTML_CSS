@@ -138,5 +138,34 @@ function calculator() {
     }
 } else {
     alert('Enter a valid number or hit Enter key')
-}
-}
+}};
+
+const trainerImg = document.getElementById('.trainers-gallery img');
+const trainerBg = document.getElementById('.trainer-bg');
+const trainerTexts = document.getElementById('.trainer-text');
+
+trainerImg.forEach(img => {
+    img.addEventListener('mouseenter', () => {
+        const bg = img.closest('.trainer-1, .trainer-2, .trainer-3').querySelector('.trainer-bg');
+        bg.style.clipPath = "polygon(0% 30%, 30% 30%, 30% 0%, 70% 0%, 70% 30%, 100% 30%, 100% 90%, 90% 90%, 90% 100%, 10% 100%, 10% 90%, 0% 90%)";
+        bg.style.width = "106%";
+        bg.style.height = "106%";
+    });
+
+    img.addEventListener('mouseleave', () => {
+        const bg = img.closest('.trainer-1, .trainer-2, .trainer-3').querySelector('.trainer-bg');
+        bg.style.clipPath = "";
+        bg.style.width = "";
+        bg.style.height = "";
+    });
+});
+
+trainerImg.forEach((img, index) => {
+    img.addEventListener('mouseenter', () => {
+        trainerTexts[index].style.opacity = "1";
+    });
+
+    img.addEventListener('mouseleave', () => {
+        trainerTexts[index].style.opacity = "0";
+    })
+})
