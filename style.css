@@ -947,7 +947,7 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
-    gap:5%;
+    gap: 5%;
     margin: auto;
     padding: 20px;
     justify-content: center;
@@ -968,7 +968,7 @@ h4 {
     margin-bottom: 16px;
 }
 
-.contact-info > div {
+.contact-info>div {
     margin-bottom: 16px;
 }
 
@@ -1012,19 +1012,17 @@ h4 {
 }
 
 .contact-input form input,
-.contact-input form textarea 
-{
+.contact-input form textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 8px;
-    border:1px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
 }
 
 .contact-input form input::placeholder,
-.contact-input form textarea::placeholder
-{
+.contact-input form textarea::placeholder {
     opacity: 60%;
 }
 
@@ -1036,7 +1034,7 @@ h4 {
     flex-direction: column;
     position: relative;
     width: 50%;
-    padding: 20px 0; 
+    padding: 20px 0;
 }
 
 /*
@@ -1088,7 +1086,323 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    gap:50px;
+    gap: 50px;
     margin-top: 20px;
     margin-bottom: 25px;
+}
+
+.links h4 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.links a {
+    color: var(--bg-color-1);
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.information,
+.helpful {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* responsive design section */
+
+@media screen and (max-width: 576px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        padding: 16px 8px;
+    }
+
+    .header {
+        height: 4vh;
+        justify-content: space-between;
+    }
+
+    .header img {
+        height: 8vh;
+        padding: 0 0 0 16px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 32px;
+        color: var(--font-color-1);
+        cursor: pointer;
+        padding: 32px;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .navbar-web {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        position: absolute;
+        padding: 16px;
+        top: 9vh;
+        right: -100%;
+        background-color: var(--bg-color-3);
+        gap: 9, 6px;
+        transition: right 0.5 ease;
+    }
+
+    .menu-btn:checked~.navbar-web {
+        right: 0;
+    }
+
+    .navbar-web ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-web ul li {
+        margin: 16px 0;
+    }
+
+    .navbar-web ul li a {
+        color: var(--font-color-1);
+        text-decoration: none;
+        font-size: 24px;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home .hero-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -5;
+    }
+
+    .home .hero-img img {
+        object-fit: cover;
+    }
+
+    .hero {
+        margin: 20vh auto auto auto;
+        gap: 1vh;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+        line-height: 1em;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero .button-3 {
+        margin: 16px 0 16px 0;
+    }
+
+    .hero .button-1 {
+        font-size: 16px;
+        text-align: start;
+    }
+
+    .hero .button-2,
+    .hero .button-3 {
+        font-size: 16px;
+        text-align: start;
+    }
+
+    /* home section */
+
+    .home-boxes {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 120px;
+    }
+
+    .home-boxes .box {
+        width: 50%;
+        height: 20vh;
+    }
+
+    /* class section */
+
+    .our-classes {
+        height: auto;
+    }
+
+    .class-start h2 {
+        font-size: 21px;
+    }
+
+    .class-btn {
+        padding: 3.2px;
+        gap: 32px;
+    }
+
+    .class-btn button {
+        padding: 8px;
+        font-size: 16px;
+        text-align: center;
+        width: 30%;
+    }
+
+    .class-content {
+        flex-direction: column;
+        gap: 4, 8px;
+    }
+
+    .class-text,
+    .class-img,
+    .calculator-text,
+    .calculator-img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .bmi-calculator {
+        height: auto;
+        padding-top: 32px;
+        gap: 32px;
+    }
+
+    .bmi-calculator .calculator-text h2 {
+        font-size: 21px;
+    }
+
+    .class-text h4 {
+        font-size: 16px;
+    }
+
+    .calculator-img img {
+        width: 100%;
+    }
+
+    .indicator {
+        position: absolute;
+        bottom: -3vh;
+        left: 6%;
+        z-index: 99;
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 16px solid var(--bg-color-2);
+    }
+
+    /* section for trainers */
+
+    .trainers-gallery {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .calculator-input p#enter {
+        font-size: 1.5vh;
+        text-align: center;
+    }
+
+    .trainer-1,
+    .trainer-2,
+    .trainer-3 {
+        width: 50%;
+    }
+
+    .trainers-start {
+        width: 80%;
+        text-align: center;
+    }
+
+    .trainers-start p {
+        width: 60%;
+        text-align: center;
+    }
+
+    .trainers-start h2 {
+        font-size: 21px;
+    }
+
+    .trainer-text h4,
+    .trainer-text p {
+        font-size: 16px;
+        color: var(--bg-color-1)
+    }
+
+    /* purchase section */
+
+    .purchase-start h2 {
+        font-size: 21px;
+    }
+
+    .purchase-cards {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .card {
+        width: 60%;
+    }
+
+    /* review section */
+
+    .review-content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 16px;
+    }
+
+    .review-1,
+    .review-2 {
+        width: 70%;
+        margin: 10;
+    }
+
+    .review-start h2 {
+        font-size: 21px;
+    }
+
+    /* contact section */
+
+    .contact-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 32px;
+        padding: 16px;
+    }
+
+    
 }
