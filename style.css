@@ -1190,7 +1190,8 @@ footer {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 180%;
+ 
         z-index: -5;
     }
 
@@ -1404,5 +1405,33 @@ footer {
         padding: 16px;
     }
 
-    
+    .contact-start h2 {
+        font-size: 21px;
+
+    }
+
+    .contact-input {
+        text-align: center;
+    }
+
+    .contact-form {
+        justify-content: center;
+        width: 60%;
+    }
+
+    .contact-info {
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .contact-map { 
+        overflow: hidden;
+        margin-top: 2vh;
+        width: 60%;
+        height: 40vh;
+    }
+
+    .footer-content {
+        width: 80%;
+    }
 }
