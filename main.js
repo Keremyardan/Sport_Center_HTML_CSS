@@ -73,7 +73,7 @@ let classBtn = document.querySelector('.class-btn');
 classBtn.addEventListener('click', selectBtn);
 
 function selectBtn (e) {
-    const selectBtn = event.target;
+    const selectBtn = e.target;
     const btns = document.querySelectorAll('.class-btn button');
 
     btns.forEach(button => {
@@ -96,7 +96,7 @@ function selectBtn (e) {
 // calculation functions for bmi calculator
 const inputWeight = document.querySelector("#inputweight");
 const inputHeight = document.querySelector("#inputheight");
-const indicator = document.querySelector(".indicator");
+const indicator = document.querySelector("#indicator");
 
 inputHeight.addEventListener("keypress", (e) => {
     const key = e.key;
@@ -137,7 +137,7 @@ function calculator() {
         indicator.style.left ="85%"
     }
 } else {
-    alert('Enter a valid number or hit Enter key')
+    alert('Enter a valid number')
 }};
 
 const trainerImg = document.getElementById('.trainers-gallery img');
